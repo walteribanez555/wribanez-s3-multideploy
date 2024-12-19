@@ -28,8 +28,7 @@ jobs:
 
       - name: Write production environment file
         run: |
-          echo "${{ secrets.TESTING_ENV_FILE }}" > src/environments/environment.production.ts
-          echo "${{ secrets.TESTING_ENV_FILE }}" > src/environments/environment.development.ts
+          echo "${{ secrets.TESTING_ENV_FILE }}" > src/environments/environment.testing.ts
 
       - name: Install dependencies
         run: |
@@ -37,7 +36,7 @@ jobs:
 
       - name: Build Angular project
         run: |
-          npm run build --configuration=testing
+          npx ng build --configuration=testing
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
