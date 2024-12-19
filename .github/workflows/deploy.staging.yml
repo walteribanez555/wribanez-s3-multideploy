@@ -13,8 +13,6 @@ env:
   AWS_REGION : 'us-east-1'
   SOURCE_DIR : './dist/demo-envs/browser'
 
-
-
 jobs:
   build-infra:
     name: paralex-frontend-deploy-staging
