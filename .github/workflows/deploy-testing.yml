@@ -28,7 +28,7 @@ jobs:
 
       - name: Write production environment file
         run: |
-          echo "${{ secrets.TESTING_ENV_FILE }}" > src/environments/environment.production.ts
+          echo "${{ secrets.TESTING_ENV_FILE }}" > src/environments/environment.testing.ts
 
       - name: Install dependencies
         run: |
